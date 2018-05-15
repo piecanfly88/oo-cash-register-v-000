@@ -2,9 +2,9 @@ class CashRegister
 
   @@all = []
 
-  def self.all 
+  def self.all
     @@all
-  end  
+  end
 
 attr_accessor :total, :discount, :title, :price
 
