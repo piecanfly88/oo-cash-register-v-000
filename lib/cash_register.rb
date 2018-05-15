@@ -13,8 +13,12 @@ attr_accessor :total, :discount, :title, :price
     @discount = discount
   end
 
-  def add_item(title, price)
-    @@all << self.total += price
+  def add_item(title, price, quantity = nil)
+    if quantity
+      @@all << self.total += price * quantity
+    else
+      @@all << self.total += price
+    end
   end
 
 
